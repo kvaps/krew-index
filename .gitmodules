@@ -1,0 +1,12 @@
+[submodule "sources/kubectl-node-shell"]
+	path = sources/kubectl-node-shell
+	url = https://github.com/kvaps/kubectl-node-shell
+  branch = master
+[submodule "sources/kubectl-build"]
+	path = sources/kubectl-build
+	url = https://github.com/kvaps/kubectl-build
+  branch = master
+[submodule "sources/kubectl-use"]
+	path = sources/kubectl-use
+	url = https://github.com/kvaps/kubectl-use
+  branch = master
