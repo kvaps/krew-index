@@ -3,7 +3,7 @@ kind: Plugin
 metadata:
   name: use
 spec:
-  version: "v1.0.1"
+  version: v1.0.2
   homepage: https://github.com/kvaps/kubectl-use
   shortDescription: Simple switch between contexts and namespaces
   description: |
@@ -29,8 +29,8 @@ spec:
         values:
         - darwin
         - linux
-    uri: https://github.com/kvaps/kubectl-use/archive/v1.0.1.tar.gz
-    sha256: "afbaaed188c0e8794caa5ffe43dc9addc16bc222a4380c9635afb42644b926e8"
+    uri: https://github.com/kvaps/kubectl-use/archive/v1.0.2.tar.gz
+    sha256: 709a6139b4d87d9c06d9929ddcc3a08f602724d17d4c339bd8c1177db28f5426
     files:
     - from: kubectl-use-*/kubectl-use
       to: .
