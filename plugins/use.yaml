@@ -3,12 +3,17 @@ kind: Plugin
 metadata:
   name: use
 spec:
-  version: v1.0.2
+  version: v1.1.0
   homepage: https://github.com/kvaps/kubectl-use
   shortDescription: Simple switch between contexts and namespaces
   description: |
     Tiny plugin for easy switch between Kubernetes contexts and namespaces
-  caveats: |
+
+    Usage:
+        Load completion:
+
+          $ source <(kubectl-use -completion)
+
         Switch context:
 
           $ kubectl use prod
@@ -29,8 +34,8 @@ spec:
         values:
         - darwin
         - linux
-    uri: https://github.com/kvaps/kubectl-use/archive/v1.0.2.tar.gz
-    sha256: 709a6139b4d87d9c06d9929ddcc3a08f602724d17d4c339bd8c1177db28f5426
+    uri: https://github.com/kvaps/kubectl-use/archive/v1.1.0.tar.gz
+    sha256: c9f30d7e842768664d630b92c5a798edbb4da46854173b72d304491159699f9a
     files:
     - from: kubectl-use-*/kubectl-use
       to: .
