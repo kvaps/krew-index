@@ -46,19 +46,19 @@ pull: check
 	git submodule update --init --remote ${ALLTARGETS}
 
 index: check
-	for src in ${TARGETS}; do \
+	@for src in ${TARGETS}; do \
 		dst=$$(echo "$$(echo "$$src" | sed 's|^${SRC}/kubectl-|${DST}/|').yaml"); \
-		tag=$$(cd $$src; git describe --tags --abbrev=0); \
-		sed -i -e "s/\(  version: \).*/\1$$tag/" -e "/    uri: / s|/[^/]*$$|/$$tag.tar.gz|" $$dst; \
+		tag=$$(set -x; cd $$src; git describe --tags --abbrev=0); \
+		(set -x; sed -i -e "s/\(  version: \).*/\1$$tag/" -e "/    uri: / s|/[^/]*$$|/$$tag.tar.gz|" $$dst); \
 		url=$$(awk -F': ' '$$1 == "    uri" {print $$2}' $$dst); \
 		tmp=$$(mktemp); \
     curl -Lo "$$tmp" "$$url"; \
 		sha256=$$(sha256sum "$$tmp" | awk '{print $$1}'); \
-		sed -i -e "s/\(    sha256: \).*/\1$$sha256/" "$$dst"; \
+		(set -x; sed -i -e "s/\(    sha256: \).*/\1$$sha256/" "$$dst"); \
 	done
 
 commit:
-	git add .gitmodules ${SRC} ${DST}; \
+	git add .gitmodules ${SRC} ${DST}
 	git diff --quiet --exit-code --cached && exit 0 || git commit -m "${MSG}"
 
 push:
