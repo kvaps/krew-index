@@ -3,7 +3,7 @@ kind: Plugin
 metadata:
   name: build
 spec:
-  version: v1.4.4
+  version: v1.5.0
   homepage: https://github.com/kvaps/kubectl-build
   shortDescription: Build dockerfiles directly in your Kubernetes cluster. 
   description: |
@@ -34,8 +34,8 @@ spec:
         values:
         - darwin
         - linux
-    uri: https://github.com/kvaps/kubectl-build/archive/v1.4.4.tar.gz
-    sha256: 322c3aa4d8f9318640f77309447b270b762d8dade63d0ab550edbaf5afd61d31
+    uri: https://github.com/kvaps/kubectl-build/archive/v1.5.0.tar.gz
+    sha256: 4d8927cea35f66149b771c5e6d1637ac18c803529c8a036f2ede4748894e6cb0
     files:
     - from: kubectl-build-*/kubectl-build
       to: .
