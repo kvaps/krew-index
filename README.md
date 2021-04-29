@@ -1,9 +1,9 @@
 # kvaps's krew-index
 
+
 [Krew] index repository with my plugins
 
 [Krew]: https://github.com/kubernetes-sigs/krew
-
 
 ##### install repository:
 
