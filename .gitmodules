@@ -10,3 +10,7 @@
 	path = sources/kubectl-use
 	url = https://github.com/kvaps/kubectl-use
   branch = master
+[submodule "sources/kubectl-proxy-port-forward"]
+	path = sources/kubectl-proxy-port-forward
+	url = https://github.com/kvaps/kubectl-proxy-port-forward
+  branch = master
