@@ -31,7 +31,7 @@ spec:
         - darwin
         - linux
     uri: https://github.com/kvaps/kubectl-use/archive/v1.2.0.tar.gz
-    sha256: 53475d4bd4cfc5f98561795be6c7571cc9a581ae83176287dccbe65d9554cae7
+    sha256: 14541ee484d18e05853f70919552eb20303eb2a5ab41a5f74853eca13c775563
     files:
     - from: kubectl-use-*/kubectl-use
       to: .
